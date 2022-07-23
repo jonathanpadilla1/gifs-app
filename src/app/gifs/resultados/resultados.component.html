@@ -1,9 +1,26 @@
-<p>resultados works!</p>
+<!-- <ul>
+  <li *ngFor="let gif of resultados">
+    {{gif.title}}
+  </li>
+</ul>
+ -->
 
-<div class="col">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid fuga
-    sapiente dolor eaque velit est ipsa eligendi accusantium vero, nemo dolores,
-    saepe quas. Maxime, facere dolorum atque tempore eaque magnam?
+<div class="row">
+  <div
+    *ngFor="let gif of resultados"
+    class="col-md-4 col-sm-6 animate__animated animate__fadeIn"
+  >
+    <div class="card">
+      <img
+        [src]="gif.images.downsized_medium.url"
+        [alt]="gif.title"
+        class="card-img-top"
+      />
+      <div class="card-body">
+        <p class="card-text">
+          {{ gif.title }}
+        </p>
+      </div>
+    </div>
   </div>
-
-  
+</div>
